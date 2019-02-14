@@ -1,0 +1,89 @@
+<html>
+    <style>
+        body{
+            background-color: rgb(35, 119, 214);
+        }
+    </style>
+    <script>
+        function getChoice1()
+        {
+            var myChoice = document.getElementById("choice").value;
+            var myQuestion = document.getElementById("question");
+            if(myChoice === "Wake up")
+            {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice2").style.display="block";
+                document.getElementById("btnSubmit2").style.display="block";
+
+                document.getElementById("mainImage").src = "door.jpg"
+
+                myQuestion.innerHTML =
+                 "You start pinching youself but to no avail. Looks like your stuck hear. Guess your moving forward after all. As you do you happen upon two doors.";
+            }
+            else if(myChoice === "Push forward")
+            {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice2").style.display="block";
+                document.getElementById("btnSubmit2").style.display="block"
+                document.getElementById("mainImage").src = "door.jpg"
+                myQuestion.innerHTML = " Knowing in your heart it is a complete waste of time to try and wake up. You decide to push forward. As you do you happen upon two doors.";
+
+            }
+            else
+            {
+                myQuestion.innerHTML = "Come on, make an actual choice you chicken!";
+            }
+        
+        }
+        function getChoice2()
+        {
+            var door = document.getElementById("choice2").value;
+            var myQuestion = document.getElementById("question");
+            if(door === "Left")
+            {
+                document.getElementById("mainImage").src = "clown.jpg"
+                myQuestion.innerHTML = "Why HEllO!! Looks like I finally get some Company";
+            }
+            else if(door === "Right")
+            {
+                document.getElementById("choice2").style.display="none";
+                document.getElementById("btnSubmit2").style.display="none";
+                
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block"
+                myQuestion.innerHTML = "So far so good. Seems the hallway continues on to some stairs but you hear some strange laughing through the walls. Maybe you should go back and check it out? or maybe just leave? What to choose?";
+            }
+        }
+    </script>
+    <body>
+
+        <h1>The Dark Hallway</h1>
+        <br>
+        <img src="Hallway.jpg" id="mainImage">
+    <div id="question">
+    <br>
+        What where am I? What is this Place? These are the questions you find yourself asking.
+        <br>
+        Last thing you remember is laying down to sleep and now here you are. A dark Hallway with 
+        a lot of stairs.
+        <br>
+        Seems you have only two choices. 'Wake up' or 'Push forward'? 
+    </div>
+       
+        <br>
+        <input type="text" size="30" id="choice" value="Which do you choose?">
+        <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
+
+        <input type="text" size="30" id="choice2" value="Left or Right? " style="display:none">
+        <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice3" value="Go back or leave?."  style="display:none">
+        <button id="btnSubmit3" onclick="getChoice3();" style="display:none">Click to continue</button>
+
+    </body>
+
+</html>
