@@ -24,11 +24,12 @@ function printBlanks()
 function createRandomImageArray()
 {
     // create an array of actual images
-    var actualImagePath = ["images/dog.jpg", "images/tiger.jpeg"];
+    var actualImagePath = ["images/Aquaman.jpg", "images/Batman.png","images/BlackCanary.jpg","image/Flash.jpeg","image/GreenArrow.jpeg",
+"image/GreenLantern.jpg","images/Hawkgirl.png","images/Martion.jpg","images/Superman.png","images/WonderWoman.jpeg"];
     // create another array to make sure the images only get added twice
     var count = [0,0];
     // create a while statement to check to see if our actual image array is full
-    while(actualImages.length < 4)
+    while(actualImages.length < 20)
     {
         // get a random number between 0 and the number total number of images that we can choose from
         var randomNumber = Math.floor(Math.random() * actualImagePath.length)
