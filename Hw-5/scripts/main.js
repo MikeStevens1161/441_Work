@@ -3,10 +3,10 @@ var imageTags = ["image0","image1", "image2", "image3", "image4","image5",
 "image6","image7","image8","image9",];
 var blankImagePath = "images/JusticeLeague.png";
 
-var player = { "firstname":"","lastname":""};
+var player = { "firstname":"","lastname":"","score":""};
 var firstNumber = -1;
 var secondNumber = -1;
-
+var attempts = 0;
 var actualImages = new Array();
    
 function printBlanks()
@@ -65,6 +65,7 @@ function flipImage(number)
     if(actualImages[secondNumber] != actualImages[firstNumber] && firstNumber >= 0 && secondNumber >=0)
     {
         setTimeout(imagesDisapper,1000);
+        attempts++;
     }
     else if(actualImages[secondNumber] == actualImages[firstNumber] && firstNumber >= 0 && secondNumber >=0)
     {
@@ -89,7 +90,8 @@ function imagesDisapper()
 function addToPlayer()
 {
     var firstName = document.getElementById("txtFirstName").value;
-    
+    var lastName = document.getElementById("txtLastName").value;
+    player.lastname = lastName;
     player.firstname = firstName;
     localStorage.setItem("playerInfo",JSON.stringify(player));
     window.location = "Index.html";
@@ -101,4 +103,11 @@ function playerInfo()
     var playerInformation = localStorage.getItem("playerInfo");
     player = JSON.parse(playerInformation);
 
+}
+function go()
+{
+    player.score = attempts;
+    localStorage.setItem(playerInfo,JSON.stringify(player));
+    window.location = "final.html"
+    console.log(player.firstname,lastname,score);
 }
