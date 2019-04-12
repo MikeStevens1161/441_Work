@@ -1,0 +1,68 @@
+
+ body {
+  background-color: rgb(214, 145, 41);
+}
+
+#imagesIds {
+  display: block;
+  height: 50%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+#square0{
+  background: rgb(11, 14, 199);
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 1200px;
+  top: 750px;
+}
+
+#square1{
+  background: rgb(235, 231, 42);
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 1400px;
+  top: 110px;
+}
+
+#square2{
+  background: rgb(204, 13, 105);
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 1200px;
+  top: 40px;
+}
+
+#move {
+  position: absolute;
+  left: 775px;
+  top: 20px;
+}
+
+#line1 {
+  color: rgb(212, 55, 27);
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+#line2 {
+  color: rgb(102, 100, 247);
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+#line3 {
+  color: rgb(17, 19, 53);
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
